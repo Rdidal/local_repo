@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h2 class="name">Rahul Didal</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <!-- <li><a href="#">Services</a></li> -->
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h3>Hi, I'M <span>Rahul Didal</span><br>From Jaipur.</h3>
+        </div>
+    </div>
+    <!-------about-------->
+    <div class="about">
+        <div class="about-me">
+            <h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veniam earum voluptate doloremque
+                eveniet voluptatibus eos ad illo est quos eaque rem provident itaque quaerat eum, suscipit ipsum libero
+                temporibus!</p>
+        </div>
+        <div class="tab-titles">
+            <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('eduation')">Education</p>
+        </div>
+        <div class="tab-contents skills" id="skills">
+            <ul>
+                <li><span>Web Developer</span><br>HTML<br>CSS<br>JavaScript<br>jQuery<br>Bootstrap</li>
+                <li><span>Python</span></li>
+                <li><span>MySQL</span></li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>Freshar in IT</span></li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="eduation">
+            <ul>
+                <li><span>2023</span><br>Web Design Training at Samyak Computer Classes</li>
+                <li><span>2018</span><br>B.Tech from REC Jaipur.</li>
+            </ul>
+        </div> 
+    </div>
+<!-- <-----------portfolio------------>
+
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+        </div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/web-designer111.webp">
+                <div class="layer">
+                    <h3>Web Site Design</h3>
+                    <p>Make your business online for useing your brand/shop portfolio.
+                        Let's connect with me.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Python-Programming.png">
+                <div class="layer">
+                    <h3>Python Developer</h3>
+                    <p>Learn Data Scince & Machince learning with Python.</p>
+                </div>
+            </div>   
+            <div class="work">
+                <img src="images/sql_and_mysql.avif">
+                <div class="layer">
+                    <h3>MySQL</h3>
+                    <p>MySQL is a relational database management system
+                        Databases are the essential data repository for all software applications.</p>
+                </div>  
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+    <!-- <------------contact------------>
+
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-lift">
+                    <h1 class="sub-contact">Contact Me</h1>
+                    <p>rdidal07@gmail.com</p>
+                    <p>+91-9024 270 227</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("skills");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("skills")
+    }
+</script>
+</html>
